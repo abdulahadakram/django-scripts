@@ -28,16 +28,16 @@ This Django management command updates static file paths in your HTML templates 
           management/
               commands/
                   __init__.py
-                  fix_static_references.py
+                  update_static_paths.py
       ```
 
       - `your_app/`: This is the directory of your Django app.
       - `management/commands/`: This is where Django management commands are stored.
-      - `fix_static_references.py`: This is the script you cloned.
+      - `update_static_paths.py`: This is the script you cloned.
 
    2. **Copy the Script:**
 
-      Copy the `fix_static_references.py` file from the cloned repository to the `management/commands/` directory in your Django app.
+      Copy the `update_static_paths.py` file from the cloned repository to the `management/commands/` directory in your Django app.
 
    3. **Ensure the `__init__.py` Files Exist:**
 
@@ -48,7 +48,7 @@ This Django management command updates static file paths in your HTML templates 
       Use the following command to execute the script:
 
       ```bash
-      python manage.py fix_static_references --directory /path/to/your/templates --backup
+      python manage.py update_static_paths --directory /path/to/your/templates --backup
       ```
 
       - `--directory`: Specifies the directory to search for HTML files. If not provided, the script will use the first template directory specified in your Django settings.
@@ -57,13 +57,13 @@ This Django management command updates static file paths in your HTML templates 
       **Example Without Backup:**
 
       ```bash
-      python manage.py fix_static_references --directory /path/to/your/templates
+      python manage.py update_static_paths --directory /path/to/your/templates
       ```
 
       **Example With Backup:**
 
       ```bash
-      python manage.py fix_static_references --backup
+      python manage.py update_static_paths --backup
       ```
 
       If no `--directory` is specified, the script will use the default template directory from your Django settings.
