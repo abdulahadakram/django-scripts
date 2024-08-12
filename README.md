@@ -14,8 +14,8 @@ This Django management command updates static file paths in your HTML templates 
    Clone this repository to your local machine:
 
    ```bash
-   git clone <repository_url>
-   cd <repository_directory>
+   git clone https://github.com/abdulahadakram/django-scripts.git
+   cd django-scripts
 
 2. **Add the Script to Your Django Project and Run It**
 
